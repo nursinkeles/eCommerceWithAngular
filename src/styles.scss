@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
+  body {
+    box-sizing: border-box;
+    margin: 20px;
+    background-color: #d6d5d3;
+    letter-spacing: 0.03rem;
+    ol,
+    ul {
+      list-style: none;
+    }
+  }
+}

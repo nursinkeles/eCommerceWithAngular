@@ -1,0 +1,35 @@
+<div class="card">
+  <i
+    class="fa-heart"
+    [ngClass]="{
+      'fa-solid': isFavorite,
+      'fa-regular': !isFavorite
+    }"
+    (click)="toggleFavorite()"
+    style="color: #c8aa8c"
+  ></i>
+  <img src="{{ images[0] }}" />
+  <div class="card-content">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+  </div>
+  <div class="rating">
+    <span *ngFor="let star of getRatingStars(rating) | slice : 0 : 5">
+      <i
+        class="fa-star"
+        [ngClass]="{
+          'fa-solid': star === 'full',
+          'fa-regular': star === 'empty'
+        }"
+        style="color: #c8aa8c"
+      ></i>
+    </span>
+  </div>
+  <h2>{{ calculateFinalPrice(price, discountPercentage) }}</h2>
+
+  <div class="card-footer">
+    <p>{{ price }}$</p>
+    <small>(%{{ discountPercentage }} off)</small>
+    <span class="brand">{{ brand }}</span>
+  </div>
+</div>
